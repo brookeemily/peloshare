@@ -3,11 +3,22 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// Middleware for parsing body on post request
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // Database
 const mongoose = require("mongoose");
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/peloshare");
 const db = require("./models");
+
+// Login post route
+app.post("/login", function(req, res){
+  console.log("login route hit");
+  console.log(req.body);
+  res.json({loggedIn: true});
+})
 
 // All users test route
 app.get("/allusers", function(req, res){
