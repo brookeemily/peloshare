@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom'
-import axios from "axios";
 import mapboxgl from 'mapbox-gl';
 import Tooltip from '../components/tooltip';
 mapboxgl.accessToken = 'pk.eyJ1IjoiYnJvb2tlLW1pdGNoZWxsIiwiYSI6ImNqcXRuZm94dDBhazE0Mm4wY3BiNDdxaHEifQ.5cW4ovdm3QLHkzawfS44Dg';
@@ -72,6 +71,14 @@ class MapComp extends Component {
       zoom: 0
     });
 
+    // Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+}));
+
     const tooltip = new mapboxgl.Marker(this.tooltipContainer, {
       offset: [-120, 0]
     }).setLngLat([0,0]).addTo(map);
@@ -83,6 +90,7 @@ class MapComp extends Component {
       this.setTooltip(features);
     });
 
+    
     map.on('load', function () {
 
         map.addLayer({
