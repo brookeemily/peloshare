@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from 'react-dom'
 import mapboxgl from 'mapbox-gl';
 import Tooltip from '../components/tooltip';
+import MapboxGeocoder from "mapbox-gl-geocoder";
 mapboxgl.accessToken = 'pk.eyJ1IjoiYnJvb2tlLW1pdGNoZWxsIiwiYSI6ImNqcXRuZm94dDBhazE0Mm4wY3BiNDdxaHEifQ.5cW4ovdm3QLHkzawfS44Dg';
 
 
@@ -77,6 +78,10 @@ map.addControl(new mapboxgl.GeolocateControl({
         enableHighAccuracy: true
     },
     trackUserLocation: true
+}));
+
+map.addControl(new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken
 }));
 
     const tooltip = new mapboxgl.Marker(this.tooltipContainer, {
