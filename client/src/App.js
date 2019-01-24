@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MapComp from "./pages/Map";
+import Home from "./pages/Home";
+
 import SignIn from "./pages/SignIn";
 
 import ReactDOM from 'react-dom'
@@ -120,7 +122,7 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/" component={SignIn} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/map" component={MapComp} />
           {/* <Route exact path="/books/:id" component={Detail} /> */}
           {/* <Route component={NoMatch} /> */}

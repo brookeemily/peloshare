@@ -2343,6 +2343,11 @@ map.addControl(new MapboxGeocoder({
             .addTo(map);
     });
 
+       // Center the map on the coordinates of any clicked symbol from the 'symbols' layer.
+       map.on('click', 'symbols', function (e) {
+        map.flyTo({center: e.features[0].geometry.coordinates}
+        );
+    });
     // Change the cursor to a pointer when the mouse is over the places layer.
     map.on('mouseenter', 'places', function () {
         map.getCanvas().style.cursor = 'pointer';

@@ -1,0 +1,35 @@
+body {
+    background-image: url("./images/background-bw.png");
+    background-size: cover;
+    background-position-y: 20%;
+
+}
+
+.overlay {
+    background: rgb(28, 27, 27, 0.97) !important;
+    background-image: url("./images/header3.jpg");
+    background-size: cover;
+    color: white;
+    height:100vh;
+
+}
+
+hr {
+    border: 0;
+    width: 20%;
+    color: #f00;
+    background-color: #f00;
+    height: 1px;
+    margin: auto;
+}
+
+.btn-danger {
+    padding: 10px;
+    margin: 2px;
+}
+
+.btn-danger:hover {
+    padding: 10px;
+    margin: 2px;
+    text-decoration: none;
+}
