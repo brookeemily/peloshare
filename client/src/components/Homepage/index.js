@@ -23,7 +23,7 @@ function Homepage() {
      
      <br/><br/>
  <a href="/map" className="h6 btn-danger">find your fix</a><br/><br/>
-    <a href="/map" className="h6 btn-danger">submit location</a> 
+    {/* <a href="/map" className="h6 btn-danger">submit location</a>  */}
     </div>
     </div>
   );
