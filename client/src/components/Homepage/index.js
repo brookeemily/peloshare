@@ -8,10 +8,10 @@ function Homepage() {
       className="overlay"
       >
 
-        <h1 className="display-1">Pelofindr</h1><br/>
+        <h1 className="display-1">Peloshare</h1><br/>
         <hr/>
         <div
-      style={{paddingTop: "60px", textAlign: "center"}} 
+      style={{paddingTop: "30px", textAlign: "center"}} 
       className="textOverlay"
       >
       <span className="h6">The Peloton Bike: the only exercise bike streaming <br/> indoor cycling classes to your home live and on-demand.
