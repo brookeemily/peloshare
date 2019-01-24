@@ -1,4 +1,5 @@
 # Peloshare
+https://peloshare.herokuapp.com/map
 
 ## Overview
 Peloshare helps indoor cycling enthusiasts find their Peloton fix while away from home by displaying a map of publicly available Peloton bikes. 
